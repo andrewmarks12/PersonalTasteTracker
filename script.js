@@ -1,21 +1,25 @@
 console.log("Hello World!");
 // 1. Create an array called favoriteFoods with at least 6 foods you love.
 
-
+let favoriteFoods = ["tiramisu", "sushi", "salmon", "steak", "chicken", "ice cream"]; 
 
 // 2. Loop through the list and print: "One of my favorite foods is ______."
 
-
-
-
+for (let i = 0; i < favoriteFoods.length; i++) { 
+  console.log("One of my favorite foods is " + favoriteFoods[i]);
+}
 
 // 3. Print out the rating for each food with a ranking like:
 // "My #1 favorite food is Ramen" (copy/paste for all items)
 // "My #2 favorite food is Sushi"
 // ...etc.
 
-
-
+console.log("My #1 favorite food is " + favoriteFoods[0]);
+console.log("My #2 favorite food is " + favoriteFoods[3]);
+console.log("My #3 favorite food is " + favoriteFoods[2]);
+console.log("My #4 favorite food is " + favoriteFoods[5]);
+console.log("My #5 favorite food is " + favoriteFoods[4]);
+console.log("My #6 favorite food is " + favoriteFoods[1]);
 
 
 // 4a. Create a function printFoodRecommendation(foodName) that prints out the following for the foodName provided
@@ -23,12 +27,16 @@ console.log("Hello World!");
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
 
-
+function printFoodRecommendation(foodName) {
+  return "Have you ever tried " + foodName +"?\nI always recommend " + foodName + " to friends.\nTrust me " + foodName + " is delicious.";
+}
 
 
 // 4b. Call the function at least 3 times
 
-
+for (let i = 0; i <=2; i ++) {
+console.log(printFoodRecommendation(favoriteFoods[i]));
+}
 
 // Here's a list of 50 friends' favorite foods:
 let friendFavorites = [
@@ -45,7 +53,21 @@ let friendFavorites = [
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
 
+/*for (let i = 0; i < friendFavorites.length; i++) {
+  console.log(friendFavorites[i]);
+}*/
 
+let longFoodNames = [];
+
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length > 6) {
+    longFoodNames.push(friendFavorites[i]);
+  }
+}
+
+for (let i = 0; i < longFoodNames.length; i++) {
+  console.log(longFoodNames[i]);
+}
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
 
